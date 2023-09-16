@@ -1,0 +1,23 @@
+// Script for smooth scrolling to anchor links in the menu
+$(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
+});
+
+// Script to control the slider
+$(document).ready(function() {
+    // Add your slider control logic here
+    // Example: You can use a plugin like Slick Slider to create a responsive slider
+});
+
+// Script for handling customer feedback form submission (if applicable)
+$(document).ready(function() {
+    // Add your customer feedback form submission logic here
+});
